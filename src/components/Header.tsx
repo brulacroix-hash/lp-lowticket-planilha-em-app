@@ -36,7 +36,7 @@ export function Header() {
         className="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
       >
         <img
-          src="https://img.usecurling.com/i?q=play&color=orange"
+          src="https://www.codandosemcodar.com.br/logo-csc.png"
           alt="Codando sem Codar Logo"
           className="h-8 w-8 object-contain"
         />
