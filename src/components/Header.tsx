@@ -33,9 +33,16 @@ export function Header() {
     >
       <div
         onClick={scrollToTop}
-        className="cursor-pointer font-bold text-lg md:text-xl tracking-tight hover:opacity-90 transition-opacity text-white"
+        className="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
       >
-        Codando sem Codar
+        <img
+          src="https://img.usecurling.com/i?q=play&color=orange"
+          alt="Codando sem Codar Logo"
+          className="h-8 w-8 object-contain"
+        />
+        <span className="font-bold text-lg md:text-xl tracking-tight text-white">
+          Codando sem Codar
+        </span>
       </div>
 
       <div
