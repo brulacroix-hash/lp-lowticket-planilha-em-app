@@ -1,4 +1,4 @@
-import { MoveRight, Sparkles } from 'lucide-react'
+import { MoveRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
@@ -20,7 +20,6 @@ export function Hero() {
               variant="secondary"
               className="px-4 py-1.5 text-sm font-medium bg-secondary/50 hover:bg-secondary/60 border-primary/20 border text-primary gap-2 rounded-full"
             >
-              <Sparkles className="w-3.5 h-3.5 fill-primary" />
               +7.500 pessoas confiam no ecossistema Codando
             </Badge>
 
@@ -52,9 +51,7 @@ export function Hero() {
           <div className="relative lg:h-[600px] w-full flex items-center justify-center lg:justify-end animate-fade-in-up animation-delay-200">
             {/* Visual Content - Abstract Representation since floating elements were removed per user request */}
             <div className="w-full h-full flex items-center justify-center opacity-50">
-              {/* You might want to keep a placeholder or just the layout structure. 
-                  Since specific floating elements were requested to be removed, 
-                  leaving the container for layout stability but empty of those specific overlays. */}
+              {/* Placeholder for visual balance */}
             </div>
           </div>
         </div>

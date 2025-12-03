@@ -19,8 +19,7 @@ export function FinalCTA() {
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-            Torne-se o criador da sua própria tecnologia hoje mesmo. Risco zero,
-            satisfação garantida.
+            Torne-se o criador da sua própria tecnologia hoje mesmo.
           </p>
         </div>
 

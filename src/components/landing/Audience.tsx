@@ -1,4 +1,3 @@
-import { CheckCircle2 } from 'lucide-react'
 import { TextLoop } from '@/components/ui/text-loop'
 
 export function Audience() {
@@ -30,19 +29,6 @@ export function Audience() {
               demais e você está ficando para trás, ou se tem ideias incríveis
               travadas em planilhas complexas...
             </p>
-
-            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="mt-1 bg-primary/20 p-1.5 rounded-full">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
-                </div>
-                <p className="text-foreground/90">
-                  Ideal para empreendedores, gestores e entusiastas que querem
-                  criar soluções de software sem a curva de aprendizado de anos
-                  de programação.
-                </p>
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-col justify-center items-start w-full p-8 md:p-12 rounded-3xl bg-gradient-to-br from-card to-background border border-white/5 shadow-2xl">
@@ -58,7 +44,7 @@ export function Audience() {
                   Seu primeiro app rodando
                 </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300">
-                  Entendendo termos essenciais vibe-coding
+                  Vocabulário atualizado
                 </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
                   Possibilidade de faturar

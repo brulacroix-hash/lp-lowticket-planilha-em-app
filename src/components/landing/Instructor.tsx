@@ -40,28 +40,21 @@ export function Instructor() {
           <div className="w-full md:w-7/12 text-center md:text-left space-y-8">
             <div className="space-y-2">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Quem vai te guiar?
+                Sua ideia não pode esperar
               </h2>
               <div className="h-1 w-12 bg-primary rounded-full mx-auto md:mx-0"></div>
             </div>
 
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed font-light">
               <p>
-                <span className="text-white font-medium">Giampaolo Lepore</span>{' '}
-                é co-fundador da{' '}
-                <strong className="text-primary">Curling AI</strong> e um dos
-                pioneiros na metodologia de{' '}
-                <span className="italic text-white">Vibe Coding</span> no
-                Brasil.
+                Giampaolo Lepore é co-fundador da Curling AI e um dos pioneiros
+                na metodologia de Vibe Coding no Brasil.
               </p>
               <p>
                 Com anos de experiência liderando produtos em grandes
                 corporações, ele percebeu que o futuro do desenvolvimento não
-                pertence apenas aos programadores, mas a quem sabe{' '}
-                <span className="text-white font-medium">
-                  fazer as perguntas certas
-                </span>{' '}
-                para a IA.
+                pertence apenas aos programadores, mas a quem sabe fazer as
+                perguntas certas para a IA.
               </p>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 export function Offer() {
   const inclusions = [
-    'Masterclass de 2 horas em vídeo (Full HD)',
+    'Masterclass de 2 horas em vídeo',
     'Glossário "Vibe Coding" (PDF Exclusivo)',
     'Acesso Vitalício',
   ]
