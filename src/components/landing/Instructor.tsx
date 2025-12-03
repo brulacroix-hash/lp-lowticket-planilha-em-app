@@ -22,7 +22,7 @@ export function Instructor() {
 
               <div className="absolute inset-0 rounded-[2rem] overflow-hidden border-2 border-white/10 shadow-2xl">
                 <img
-                  src="https://www.codandosemcodar.com.br/perfil.jpg"
+                  src="https://img.usecurling.com/ppl/large?gender=male"
                   alt="Giampaolo Lepore"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
                 />
@@ -40,7 +40,7 @@ export function Instructor() {
           <div className="w-full md:w-7/12 text-center md:text-left space-y-8">
             <div className="space-y-2">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Sua ideia não pode esperar
+                Giampaolo Lepore
               </h2>
               <div className="h-1 w-12 bg-primary rounded-full mx-auto md:mx-0"></div>
             </div>

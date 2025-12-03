@@ -15,7 +15,7 @@ export function FinalCTA() {
       <div className="container mx-auto max-w-4xl space-y-10 relative z-10">
         <div className="space-y-6">
           <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter leading-tight">
-            Sua ideia não pode esperar
+            Tire sua ideia do papel
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
