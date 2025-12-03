@@ -32,7 +32,7 @@ export function Offer() {
                   variant="outline"
                   className="mb-6 border-primary/50 text-primary px-3 py-1"
                 >
-                  Oferta Flash
+                  Oferta por tempo indeterminado
                 </Badge>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
                   Tudo o que você precisa para começar hoje.

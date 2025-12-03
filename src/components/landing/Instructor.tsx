@@ -63,10 +63,6 @@ export function Instructor() {
                 </span>{' '}
                 para a IA.
               </p>
-              <p className="border-l-2 border-primary/30 pl-4 text-base italic opacity-80">
-                "Minha missão é provar que você pode construir softwares
-                complexos usando apenas a língua portuguesa e lógica."
-              </p>
             </div>
           </div>
         </div>

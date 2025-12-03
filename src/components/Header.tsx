@@ -41,7 +41,7 @@ export function Header() {
           className="h-8 w-8 object-contain"
         />
         <span className="font-semibold text-sm md:text-base text-white tracking-tight">
-          +7.500 pessoas confiam no ecossistema Codando
+          Codando sem Codar
         </span>
       </div>
 

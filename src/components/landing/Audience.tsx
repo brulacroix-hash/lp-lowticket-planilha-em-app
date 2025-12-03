@@ -58,7 +58,7 @@ export function Audience() {
                   Seu primeiro app rodando
                 </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300">
-                  Entender termos essenciais de vibe-coding
+                  Entendendo termos essenciais vibe-coding
                 </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
                   Possibilidade de faturar

@@ -1,4 +1,4 @@
-import { MoveRight, Play, Sparkles } from 'lucide-react'
+import { MoveRight, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
@@ -21,7 +21,7 @@ export function Hero() {
               className="px-4 py-1.5 text-sm font-medium bg-secondary/50 hover:bg-secondary/60 border-primary/20 border text-primary gap-2 rounded-full"
             >
               <Sparkles className="w-3.5 h-3.5 fill-primary" />
-              Revolução No-Code & AI
+              +7.500 pessoas confiam no ecossistema Codando
             </Badge>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] text-balance">
@@ -45,39 +45,16 @@ export function Hero() {
                 Quero meu acesso por R$37
                 <MoveRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-14 px-8 text-base bg-transparent border-white/10 hover:bg-white/5 hover:text-white rounded-full"
-              >
-                <Play className="mr-2 h-4 w-4" />
-                Assista ao vídeo
-              </Button>
             </div>
           </div>
 
           {/* Right Visual */}
           <div className="relative lg:h-[600px] w-full flex items-center justify-center lg:justify-end animate-fade-in-up animation-delay-200">
-            {/* Floating Elements */}
-            <div className="absolute top-10 left-0 lg:-left-10 z-20 bg-card/80 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-2xl animate-float">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
-                  <span className="text-green-500 font-bold text-xs">XLSX</span>
-                </div>
-                <MoveRight className="text-muted-foreground w-4 h-4" />
-                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary font-bold text-xs">APP</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute bottom-20 right-0 lg:-right-4 z-20 bg-card/80 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-2xl animate-float animation-delay-400">
-              <div className="flex items-center gap-3">
-                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-sm font-medium text-white">
-                  App Deployado com Sucesso
-                </span>
-              </div>
+            {/* Visual Content - Abstract Representation since floating elements were removed per user request */}
+            <div className="w-full h-full flex items-center justify-center opacity-50">
+              {/* You might want to keep a placeholder or just the layout structure. 
+                  Since specific floating elements were requested to be removed, 
+                  leaving the container for layout stability but empty of those specific overlays. */}
             </div>
           </div>
         </div>
