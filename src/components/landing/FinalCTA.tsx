@@ -15,10 +15,7 @@ export function FinalCTA() {
       <div className="container mx-auto max-w-4xl space-y-10 relative z-10">
         <div className="space-y-6">
           <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter leading-tight">
-            Sua ideia não pode esperar <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
-              pelo desenvolvedor perfeito.
-            </span>
+            Sua ideia não pode esperar
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
@@ -28,7 +25,7 @@ export function FinalCTA() {
         </div>
 
         <div className="pt-8 flex flex-col items-center gap-6">
-          <div className="relative group">
+          <div className="relative group w-full sm:w-auto">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-glow"></div>
             <Button
               size="lg"
@@ -37,18 +34,18 @@ export function FinalCTA() {
                 'relative w-full sm:w-auto text-lg px-8 py-8 h-auto rounded-full',
                 'bg-background text-white border border-white/10',
                 'hover:bg-white/5 hover:scale-105 transition-all duration-300',
-                'flex items-center gap-4',
+                'flex items-center gap-4 justify-center sm:justify-start',
               )}
             >
-              <span className="flex flex-col items-start text-left">
+              <span className="flex flex-col items-start text-left whitespace-normal">
                 <span className="text-sm font-medium text-primary uppercase tracking-wider">
                   Acesso Imediato
                 </span>
-                <span className="text-xl font-bold">
+                <span className="text-xl font-bold leading-tight">
                   Quero começar agora por R$37
                 </span>
               </span>
-              <div className="h-10 w-10 bg-primary rounded-full flex items-center justify-center shadow-lg">
+              <div className="h-10 w-10 shrink-0 bg-primary rounded-full flex items-center justify-center shadow-lg">
                 <ArrowRight className="h-5 w-5 text-white" />
               </div>
             </Button>
@@ -56,7 +53,7 @@ export function FinalCTA() {
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
             <Lock className="w-3 h-3" />
-            <span>Pagamento Seguro via Hotmart</span>
+            <span>Pagamento Seguro</span>
           </div>
         </div>
       </div>

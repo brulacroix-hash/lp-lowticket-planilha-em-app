@@ -1,7 +1,6 @@
 import { MoveRight, Play, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { cn } from '@/lib/utils'
 
 export function Hero() {
   const handleBuyClick = () => {
@@ -26,14 +25,14 @@ export function Hero() {
             </Badge>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] text-balance">
-              Do <span className="text-primary">Zero</span> ao{' '}
-              <span className="text-primary">App</span> com IA.
+              Transforme sua{' '}
+              <span className="text-primary">planilha em app</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-balance max-w-xl">
-              Transforme suas planilhas em aplicações reais em minutos. Domine o
-              Vibe Coding e crie software sem escrever uma única linha de código
-              complexo manualmente.
+              Grande parte dos serviços prestados de vibe coding o objetivo é
+              transformar planilhas em aplicações, por isso, esse material será
+              muito útil para você atacar esse nicho em alta.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full pt-4">
@@ -54,24 +53,6 @@ export function Hero() {
                 <Play className="mr-2 h-4 w-4" />
                 Assista ao vídeo
               </Button>
-            </div>
-
-            <div className="pt-4 flex items-center gap-4 text-sm text-muted-foreground/60">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full border-2 border-background bg-muted overflow-hidden"
-                  >
-                    <img
-                      src={`https://img.usecurling.com/ppl/thumbnail?gender=${i % 2 === 0 ? 'female' : 'male'}&seed=${i}`}
-                      alt="User"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-              <p>+1.200 alunos já transformaram suas carreiras</p>
             </div>
           </div>
 
@@ -96,62 +77,6 @@ export function Hero() {
                 <span className="text-sm font-medium text-white">
                   App Deployado com Sucesso
                 </span>
-              </div>
-            </div>
-
-            {/* Main Card Mockup */}
-            <div className="relative w-full max-w-md lg:max-w-full aspect-[4/3] bg-[#1e1e1e] rounded-2xl overflow-hidden border border-white/10 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
-              {/* Mockup Header */}
-              <div className="h-10 bg-[#252526] border-b border-white/5 flex items-center px-4 gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                <div className="ml-4 h-5 w-40 bg-white/5 rounded text-[10px] flex items-center px-2 text-muted-foreground font-mono">
-                  vibe-coding-project
-                </div>
-              </div>
-              {/* Mockup Content */}
-              <div className="p-6 font-mono text-sm space-y-4">
-                <div className="flex gap-2">
-                  <span className="text-blue-400">prompt</span>
-                  <span className="text-white">
-                    Create a CRM dashboard from my sales spreadsheet
-                  </span>
-                </div>
-                <div className="pl-4 border-l-2 border-white/10 space-y-2 text-muted-foreground">
-                  <p className="typing-effect">Analyzing data structure...</p>
-                  <p className="text-green-400">✓ Customer schema detected</p>
-                  <p className="text-green-400">✓ Sales pipeline detected</p>
-                  <p className="text-white">Generating React components...</p>
-                </div>
-                <div className="mt-8 p-4 bg-black/30 rounded-lg border border-white/5">
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-xs text-muted-foreground">
-                      Dashboard Preview
-                    </span>
-                    <Badge variant="outline" className="text-[10px] h-5">
-                      Live
-                    </Badge>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="h-20 bg-primary/10 rounded border border-primary/20 flex items-center justify-center flex-col">
-                      <span className="text-2xl font-bold text-primary">
-                        R$ 45k
-                      </span>
-                      <span className="text-[10px] text-muted-foreground">
-                        Receita Mensal
-                      </span>
-                    </div>
-                    <div className="h-20 bg-blue-500/10 rounded border border-blue-500/20 flex items-center justify-center flex-col">
-                      <span className="text-2xl font-bold text-blue-400">
-                        128
-                      </span>
-                      <span className="text-[10px] text-muted-foreground">
-                        Novos Leads
-                      </span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

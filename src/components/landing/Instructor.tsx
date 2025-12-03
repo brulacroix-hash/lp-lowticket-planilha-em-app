@@ -22,7 +22,7 @@ export function Instructor() {
 
               <div className="absolute inset-0 rounded-[2rem] overflow-hidden border-2 border-white/10 shadow-2xl">
                 <img
-                  src="https://img.usecurling.com/ppl/large?gender=male&seed=1"
+                  src="https://www.codandosemcodar.com.br/perfil.jpg"
                   alt="Giampaolo Lepore"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
                 />

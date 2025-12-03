@@ -40,8 +40,8 @@ export function Header() {
           alt="Codando sem Codar Logo"
           className="h-8 w-8 object-contain"
         />
-        <span className="font-bold text-lg md:text-xl tracking-tight text-white">
-          Codando sem Codar
+        <span className="font-semibold text-sm md:text-base text-white tracking-tight">
+          +7.500 pessoas confiam no ecossistema Codando
         </span>
       </div>
 

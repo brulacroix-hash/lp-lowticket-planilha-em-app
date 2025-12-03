@@ -55,16 +55,13 @@ export function Audience() {
                 interval={2500}
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
-                  Seu primeiro App
+                  Seu primeiro app rodando
                 </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300">
-                  Vocabulário Tech
+                  Entender termos essenciais de vibe-coding
                 </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
-                  Nova Fonte de Renda
-                </span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-300">
-                  Autonomia Digital
+                  Possibilidade de faturar
                 </span>
               </TextLoop>
             </div>

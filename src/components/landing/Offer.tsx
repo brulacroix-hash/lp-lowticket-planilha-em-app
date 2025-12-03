@@ -1,5 +1,5 @@
 import { Check, Clock, Zap } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
@@ -7,9 +7,7 @@ export function Offer() {
   const inclusions = [
     'Masterclass de 2 horas em vídeo (Full HD)',
     'Glossário "Vibe Coding" (PDF Exclusivo)',
-    'Template de App Clone & Use',
-    'Acesso Vitalício & Atualizações',
-    'Comunidade de Alunos no Discord',
+    'Acesso Vitalício',
   ]
 
   const handleBuyClick = () => {
