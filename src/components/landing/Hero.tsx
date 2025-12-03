@@ -58,10 +58,11 @@ export function Hero({ title }: HeroProps) {
 
           {/* Right Visual */}
           <div className="relative lg:h-[600px] w-full flex items-center justify-center lg:justify-end animate-fade-in-up animation-delay-200">
-            {/* Visual Content - Abstract Representation since floating elements were removed per user request */}
-            <div className="w-full h-full flex items-center justify-center opacity-50">
-              {/* Placeholder for visual balance */}
-            </div>
+            <img
+              src="https://files.catbox.moe/pq17vq.png"
+              alt="Transforme sua planilha em app"
+              className="w-full h-auto max-h-[600px] object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>
