@@ -21,8 +21,9 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed text-balance">
-            Domine o vocabulário essencial de vibe coding e crie seu primeiro
-            app em horas.
+            Percebemos que grande parte dos serviços prestados de vibe coding o
+            objetivo é transformar planilhas em aplicações, por isso, esse
+            material será muito útil para você atacar esse nicho em alta.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full pt-4">
