@@ -1,8 +1,13 @@
+import { ReactNode } from 'react'
 import { MoveRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
-export function Hero() {
+interface HeroProps {
+  title?: ReactNode
+}
+
+export function Hero({ title }: HeroProps) {
   const handleBuyClick = () => {
     window.open('https://checkout.codandosemcoder.com.br/product-id', '_blank')
   }
@@ -24,8 +29,12 @@ export function Hero() {
             </Badge>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] text-balance">
-              Transforme sua{' '}
-              <span className="text-primary">planilha em app</span>
+              {title || (
+                <>
+                  Transforme sua{' '}
+                  <span className="text-primary">planilha em app</span>
+                </>
+              )}
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-balance max-w-xl">

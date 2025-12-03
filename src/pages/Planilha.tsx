@@ -7,7 +7,13 @@ import { FinalCTA } from '@/components/landing/FinalCTA'
 const Planilha = () => {
   return (
     <div className="flex flex-col w-full min-h-screen bg-background overflow-x-hidden">
-      <Hero />
+      <Hero
+        title={
+          <>
+            Aprenda vocabulário <span className="text-primary">para IA</span>
+          </>
+        }
+      />
       <Audience />
       <Offer />
       <Instructor />
