@@ -16,8 +16,8 @@ export function Hero() {
           </Badge>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-balance leading-tight">
-            Transforme sua planilha em app funcional — mesmo que nunca tenha
-            programado antes
+            Transforme sua planilha em app — mesmo que nunca tenha programado
+            antes
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed text-balance">

@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 export function FinalCTA() {
   const handleBuyClick = () => {
@@ -24,21 +25,32 @@ export function FinalCTA() {
           </p>
         </div>
 
-        <div className="pt-4">
+        <div className="pt-4 flex flex-col items-center">
           <Button
             size="lg"
             onClick={handleBuyClick}
-            className="w-full sm:w-auto text-lg px-6 sm:px-10 py-8 h-auto rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.5)] transition-all hover:scale-105 hover:shadow-[0_0_60px_-15px_hsl(var(--primary)/0.6)] whitespace-normal"
+            className={cn(
+              'w-full sm:w-auto text-lg px-6 sm:px-10 py-6 sm:py-8 h-auto rounded-full',
+              'bg-primary hover:bg-primary/90',
+              'shadow-[0_0_40px_-10px_hsl(var(--primary)/0.5)]',
+              'transition-all duration-300',
+              'sm:hover:scale-105 hover:shadow-[0_0_60px_-15px_hsl(var(--primary)/0.6)]',
+              'whitespace-normal max-w-full',
+            )}
           >
-            <span className="flex flex-col items-center sm:flex-row gap-3 text-center sm:text-left">
-              <span className="font-bold">Quero meu acesso agora por R$37</span>
-              <ArrowRight className="h-6 w-6 shrink-0" />
+            <span className="flex flex-col items-center sm:flex-row gap-2 sm:gap-3 text-center sm:text-left">
+              <span className="font-bold leading-tight">
+                Quero meu acesso agora por R$37
+              </span>
+              <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
             </span>
           </Button>
-          <p className="mt-6 text-sm text-muted-foreground/60 flex items-center justify-center gap-2">
-            <span>🔒 Compra 100% segura</span>
-            <span>•</span>
-            <span>📧 Acesso enviado por e-mail</span>
+          <p className="mt-6 text-sm text-muted-foreground/60 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            <span className="whitespace-nowrap">🔒 Compra 100% segura</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="whitespace-nowrap">
+              📧 Acesso enviado por e-mail
+            </span>
           </p>
         </div>
       </div>
