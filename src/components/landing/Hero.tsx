@@ -1,4 +1,4 @@
-import { PhoneCall, MoveRight } from 'lucide-react'
+import { MoveRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
@@ -30,16 +30,6 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full pt-4">
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={handleBuyClick}
-              className="gap-2 w-full sm:w-auto h-12 px-6 text-base"
-            >
-              Quero Acessar por R$37
-              <PhoneCall className="h-4 w-4" />
-            </Button>
-
             <Button
               variant="default"
               size="lg"

@@ -21,7 +21,7 @@ export function Feature1({
   imageSrc = 'https://img.usecurling.com/p/800/600?q=dashboard%20preview',
   imageAlt = 'placeholder hero',
   buttonPrimary = { label: 'Get Started', href: 'https://shadcnblocks.com' },
-  buttonSecondary = { label: 'Learn More', href: 'https://shadcnblocks.com' },
+  buttonSecondary,
 }: Feature1Props) {
   return (
     <section className="py-32">
@@ -40,11 +40,13 @@ export function Feature1({
                   {buttonPrimary.label}
                 </a>
               </Button>
-              <Button variant="outline" asChild>
-                <a href={buttonSecondary.href} target="_blank">
-                  {buttonSecondary.label}
-                </a>
-              </Button>
+              {buttonSecondary && (
+                <Button variant="outline" asChild>
+                  <a href={buttonSecondary.href} target="_blank">
+                    {buttonSecondary.label}
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
           <img

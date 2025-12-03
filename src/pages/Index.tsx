@@ -19,10 +19,6 @@ const Index = () => {
           label: 'Garantir Vaga',
           href: 'https://checkout.codandosemcoder.com.br/product-id',
         }}
-        buttonSecondary={{
-          label: 'Ver Projetos',
-          href: '#',
-        }}
       />
       <Offer />
       <Instructor />
