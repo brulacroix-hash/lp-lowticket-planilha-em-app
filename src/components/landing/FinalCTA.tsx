@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -8,50 +8,56 @@ export function FinalCTA() {
   }
 
   return (
-    <section className="py-24 md:py-32 px-4 text-center relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10"></div>
+    <section className="py-24 md:py-32 px-4 text-center relative overflow-hidden border-t border-white/5">
+      {/* Background Ambient Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] -z-10 animate-pulse-soft"></div>
 
-      <div className="container mx-auto max-w-4xl space-y-10">
+      <div className="container mx-auto max-w-4xl space-y-10 relative z-10">
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-            Por que deixar para amanhã o app <br className="hidden md:block" />
-            que você pode criar hoje?
+          <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter leading-tight">
+            Sua ideia não pode esperar <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
+              pelo desenvolvedor perfeito.
+            </span>
           </h2>
 
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Este é o passo mais seguro e acessível para você entrar no mundo do
-            vibe coding. Sem riscos, apenas aprendizado prático.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
+            Torne-se o criador da sua própria tecnologia hoje mesmo. Risco zero,
+            satisfação garantida.
           </p>
         </div>
 
-        <div className="pt-4 flex flex-col items-center">
-          <Button
-            size="lg"
-            onClick={handleBuyClick}
-            className={cn(
-              'w-full sm:w-auto text-lg px-6 sm:px-10 py-6 sm:py-8 h-auto rounded-full',
-              'bg-primary hover:bg-primary/90',
-              'shadow-[0_0_40px_-10px_hsl(var(--primary)/0.5)]',
-              'transition-all duration-300',
-              'sm:hover:scale-105 hover:shadow-[0_0_60px_-15px_hsl(var(--primary)/0.6)]',
-              'whitespace-normal max-w-full',
-            )}
-          >
-            <span className="flex flex-col items-center sm:flex-row gap-2 sm:gap-3 text-center sm:text-left">
-              <span className="font-bold leading-tight">
-                Quero meu acesso agora por R$37
+        <div className="pt-8 flex flex-col items-center gap-6">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-glow"></div>
+            <Button
+              size="lg"
+              onClick={handleBuyClick}
+              className={cn(
+                'relative w-full sm:w-auto text-lg px-8 py-8 h-auto rounded-full',
+                'bg-background text-white border border-white/10',
+                'hover:bg-white/5 hover:scale-105 transition-all duration-300',
+                'flex items-center gap-4',
+              )}
+            >
+              <span className="flex flex-col items-start text-left">
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">
+                  Acesso Imediato
+                </span>
+                <span className="text-xl font-bold">
+                  Quero começar agora por R$37
+                </span>
               </span>
-              <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
-            </span>
-          </Button>
-          <p className="mt-6 text-sm text-muted-foreground/60 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-            <span className="whitespace-nowrap">🔒 Compra 100% segura</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="whitespace-nowrap">
-              📧 Acesso enviado por e-mail
-            </span>
-          </p>
+              <div className="h-10 w-10 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                <ArrowRight className="h-5 w-5 text-white" />
+              </div>
+            </Button>
+          </div>
+
+          <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
+            <Lock className="w-3 h-3" />
+            <span>Pagamento Seguro via Hotmart</span>
+          </div>
         </div>
       </div>
     </section>
