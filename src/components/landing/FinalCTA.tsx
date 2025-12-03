@@ -28,11 +28,11 @@ export function FinalCTA() {
           <Button
             size="lg"
             onClick={handleBuyClick}
-            className="w-full sm:w-auto text-lg px-10 py-8 h-auto rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.5)] transition-all hover:scale-105 hover:shadow-[0_0_60px_-15px_hsl(var(--primary)/0.6)]"
+            className="w-full sm:w-auto text-lg px-6 sm:px-10 py-8 h-auto rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.5)] transition-all hover:scale-105 hover:shadow-[0_0_60px_-15px_hsl(var(--primary)/0.6)] whitespace-normal"
           >
-            <span className="flex flex-col items-center sm:flex-row gap-3">
+            <span className="flex flex-col items-center sm:flex-row gap-3 text-center sm:text-left">
               <span className="font-bold">Quero meu acesso agora por R$37</span>
-              <ArrowRight className="h-6 w-6" />
+              <ArrowRight className="h-6 w-6 shrink-0" />
             </span>
           </Button>
           <p className="mt-6 text-sm text-muted-foreground/60 flex items-center justify-center gap-2">

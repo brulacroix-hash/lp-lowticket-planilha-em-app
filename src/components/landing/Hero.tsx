@@ -11,10 +11,6 @@ export function Hero() {
     <section className="container mx-auto px-4 py-12 md:py-24 lg:py-32">
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
         <div className="flex flex-col items-start space-y-6">
-          <div className="font-bold text-xl tracking-tight text-primary">
-            Codando sem Codar
-          </div>
-
           <Badge variant="secondary" className="px-3 py-1 text-sm font-medium">
             Oferta por tempo limitado.
           </Badge>
