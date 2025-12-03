@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,8 +42,15 @@ export function Header() {
           alt="Codando sem Codar Logo"
           className="h-8 w-8 object-contain"
         />
-        <span className="font-semibold text-sm md:text-base text-white tracking-tight">
+        <span className="font-semibold text-sm md:text-base text-white tracking-tight flex items-center gap-2 whitespace-nowrap">
           Codando sem Codar
+          {location.pathname === '/' && (
+            <img
+              src="https://files.catbox.moe/pq17vq.png"
+              alt="Decoration"
+              className="h-6 w-auto object-contain"
+            />
+          )}
         </span>
       </div>
 
