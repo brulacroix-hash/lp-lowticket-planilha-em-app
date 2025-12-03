@@ -1,5 +1,6 @@
-import { ArrowRight } from 'lucide-react'
+import { PhoneCall, MoveRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 
 export function Hero() {
   const handleBuyClick = () => {
@@ -7,40 +8,58 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 px-4">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://img.usecurling.com/p/1920/1080?q=abstract%20digital%20waves%20orange%20dark&color=black"
-          alt="Background"
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background"></div>
-      </div>
+    <section className="container mx-auto px-4 py-12 md:py-24 lg:py-32">
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+        <div className="flex flex-col items-start space-y-6">
+          <div className="font-bold text-xl tracking-tight text-primary">
+            Codando sem Codar
+          </div>
 
-      <div className="container relative z-10 mx-auto text-center max-w-4xl">
-        <div className="space-y-8 animate-fade-in-up">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] text-balance">
-            Transforme sua planilha em app funcional
-            <span className="block text-primary mt-2">
-              — mesmo sem saber programar
-            </span>
+          <Badge variant="secondary" className="px-3 py-1 text-sm font-medium">
+            Oferta por tempo limitado.
+          </Badge>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-balance leading-tight">
+            Transforme sua planilha em app funcional — mesmo que nunca tenha
+            programado antes
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed text-balance">
             Domine o vocabulário essencial de vibe coding e crie seu primeiro
             app em horas.
           </p>
 
-          <div className="pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full pt-4">
             <Button
+              variant="outline"
               size="lg"
               onClick={handleBuyClick}
-              className="text-lg px-8 py-6 h-auto rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] transition-all hover:scale-105"
+              className="gap-2 w-full sm:w-auto h-12 px-6 text-base"
             >
               Quero Acessar por R$37
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <PhoneCall className="h-4 w-4" />
             </Button>
+
+            <Button
+              variant="default"
+              size="lg"
+              onClick={handleBuyClick}
+              className="gap-2 w-full sm:w-auto h-12 px-6 text-base bg-primary hover:bg-primary/90"
+            >
+              Quero meu acesso agora por R$37
+              <MoveRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+
+        <div className="flex justify-center lg:justify-end w-full">
+          <div className="bg-muted rounded-md aspect-square w-full max-w-md lg:max-w-full relative overflow-hidden border border-border shadow-xl">
+            {/* Visual placeholder as requested */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-background flex items-center justify-center">
+              <span className="text-muted-foreground/20 font-bold text-4xl">
+                Preview
+              </span>
+            </div>
           </div>
         </div>
       </div>
