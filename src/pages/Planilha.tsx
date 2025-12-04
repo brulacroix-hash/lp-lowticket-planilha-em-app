@@ -13,6 +13,7 @@ const Planilha = () => {
             Aprenda vocabulário <span className="text-primary">para IA</span>
           </>
         }
+        imageSrc="https://files.catbox.moe/q5gg02.png"
       />
       <Audience />
       <Offer />

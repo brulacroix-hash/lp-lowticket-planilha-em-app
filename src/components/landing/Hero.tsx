@@ -5,12 +5,15 @@ import { Badge } from '@/components/ui/badge'
 
 interface HeroProps {
   title?: ReactNode
+  imageSrc?: string
 }
 
-export function Hero({ title }: HeroProps) {
+export function Hero({ title, imageSrc }: HeroProps) {
   const handleBuyClick = () => {
     window.open('https://checkout.codandosemcoder.com.br/product-id', '_blank')
   }
+
+  const defaultImage = 'https://files.catbox.moe/pq17vq.png'
 
   return (
     <section className="relative overflow-hidden pt-20 md:pt-32 pb-20 lg:pb-32 min-h-[80vh] flex items-center">
@@ -54,6 +57,15 @@ export function Hero({ title }: HeroProps) {
                 <MoveRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
+          </div>
+
+          {/* Right Visual */}
+          <div className="relative lg:h-[600px] w-full flex items-center justify-center lg:justify-end animate-fade-in-up animation-delay-200">
+            <img
+              src={imageSrc || defaultImage}
+              alt="Transforme sua planilha em app"
+              className="w-full h-auto max-h-[600px] object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>
