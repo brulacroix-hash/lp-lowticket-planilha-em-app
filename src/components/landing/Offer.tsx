@@ -3,7 +3,11 @@ import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
-export function Offer() {
+interface OfferProps {
+  checkoutUrl?: string
+}
+
+export function Offer({ checkoutUrl }: OfferProps) {
   const inclusions = [
     'Masterclass de 2 horas em vídeo',
     'Glossário "Vibe Coding" (PDF Exclusivo)',
@@ -11,7 +15,7 @@ export function Offer() {
   ]
 
   const handleBuyClick = () => {
-    window.open('https://pay.kiwify.com.br/No6feAQ', '_blank')
+    window.open(checkoutUrl || 'https://pay.kiwify.com.br/No6feAQ', '_blank')
   }
 
   return (

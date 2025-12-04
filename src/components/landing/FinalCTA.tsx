@@ -2,9 +2,13 @@ import { ArrowRight, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-export function FinalCTA() {
+interface FinalCTAProps {
+  checkoutUrl?: string
+}
+
+export function FinalCTA({ checkoutUrl }: FinalCTAProps) {
   const handleBuyClick = () => {
-    window.open('https://pay.kiwify.com.br/No6feAQ', '_blank')
+    window.open(checkoutUrl || 'https://pay.kiwify.com.br/No6feAQ', '_blank')
   }
 
   return (

@@ -21,7 +21,16 @@ export function Header() {
   }
 
   const handleBuyClick = () => {
-    window.open('https://pay.kiwify.com.br/No6feAQ', '_blank')
+    const isVocabulario =
+      location.pathname === '/vocabulário' ||
+      location.pathname === '/vocabulario' ||
+      location.pathname === '/vocabul%C3%A1rio'
+
+    const checkoutUrl = isVocabulario
+      ? 'https://pay.kiwify.com.br/vDZFiTk'
+      : 'https://pay.kiwify.com.br/No6feAQ'
+
+    window.open(checkoutUrl, '_blank')
   }
 
   return (

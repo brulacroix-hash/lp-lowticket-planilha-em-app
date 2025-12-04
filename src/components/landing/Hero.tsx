@@ -7,11 +7,12 @@ interface HeroProps {
   title?: ReactNode
   description?: ReactNode
   imageSrc?: string
+  checkoutUrl?: string
 }
 
-export function Hero({ title, description, imageSrc }: HeroProps) {
+export function Hero({ title, description, imageSrc, checkoutUrl }: HeroProps) {
   const handleBuyClick = () => {
-    window.open('https://pay.kiwify.com.br/No6feAQ', '_blank')
+    window.open(checkoutUrl || 'https://pay.kiwify.com.br/No6feAQ', '_blank')
   }
 
   const defaultImage = 'https://files.catbox.moe/pq17vq.png'
