@@ -5,10 +5,11 @@ import { Badge } from '@/components/ui/badge'
 
 interface HeroProps {
   title?: ReactNode
+  description?: ReactNode
   imageSrc?: string
 }
 
-export function Hero({ title, imageSrc }: HeroProps) {
+export function Hero({ title, description, imageSrc }: HeroProps) {
   const handleBuyClick = () => {
     window.open('https://checkout.codandosemcoder.com.br/product-id', '_blank')
   }
@@ -41,9 +42,13 @@ export function Hero({ title, imageSrc }: HeroProps) {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-balance max-w-xl">
-              Grande parte dos serviços prestados de vibe coding o objetivo é
-              transformar planilhas em aplicações, por isso, esse material será
-              muito útil para você atacar esse nicho em alta.
+              {description || (
+                <>
+                  Grande parte dos serviços prestados de vibe coding o objetivo
+                  é transformar planilhas em aplicações, por isso, esse material
+                  será muito útil para você atacar esse nicho em alta.
+                </>
+              )}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full pt-4">

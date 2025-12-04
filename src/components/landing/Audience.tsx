@@ -1,6 +1,31 @@
+import { ReactNode } from 'react'
 import { TextLoop } from '@/components/ui/text-loop'
+import { cn } from '@/lib/utils'
 
-export function Audience() {
+interface AudienceProps {
+  title?: ReactNode
+  description?: ReactNode
+  loopItems?: string[]
+}
+
+export function Audience({ title, description, loopItems }: AudienceProps) {
+  const defaultLoopItems = [
+    'Seu primeiro app rodando',
+    'Vocabulário atualizado',
+    'Possibilidade de faturar',
+  ]
+
+  const items = loopItems || defaultLoopItems
+
+  const getGradientClass = (index: number) => {
+    const gradients = [
+      'bg-gradient-to-r from-white to-white/70',
+      'bg-gradient-to-r from-primary to-orange-300',
+      'bg-gradient-to-r from-blue-400 to-cyan-300',
+    ]
+    return gradients[index % gradients.length]
+  }
+
   return (
     <section className="py-24 bg-secondary/20 border-y border-white/5 relative overflow-hidden">
       {/* Decorative pattern */}
@@ -18,16 +43,19 @@ export function Audience() {
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-                Pra quem é essa{' '}
-                <span className="text-primary">Masterclass?</span>
+                {title || (
+                  <>
+                    Pra quem é essa{' '}
+                    <span className="text-primary">Masterclass?</span>
+                  </>
+                )}
               </h2>
               <div className="h-1 w-20 bg-gradient-to-r from-primary to-transparent rounded-full"></div>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Se você sente que o mundo da tecnologia está avançando rápido
-              demais e você está ficando para trás, ou se tem ideias incríveis
-              travadas em planilhas complexas...
+              {description ||
+                'Se você sente que o mundo da tecnologia está avançando rápido demais e você está ficando para trás, ou se tem ideias incríveis travadas em planilhas complexas...'}
             </p>
           </div>
 
@@ -40,15 +68,17 @@ export function Audience() {
                 className="text-3xl md:text-5xl font-bold text-white leading-tight"
                 interval={2500}
               >
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
-                  Seu primeiro app rodando
-                </span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300">
-                  Vocabulário atualizado
-                </span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
-                  Possibilidade de faturar
-                </span>
+                {items.map((text, index) => (
+                  <span
+                    key={index}
+                    className={cn(
+                      'bg-clip-text text-transparent',
+                      getGradientClass(index),
+                    )}
+                  >
+                    {text}
+                  </span>
+                ))}
               </TextLoop>
             </div>
             <div className="mt-8 w-full h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
