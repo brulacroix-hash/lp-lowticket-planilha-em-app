@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +21,7 @@ export function Header() {
   }
 
   const handleBuyClick = () => {
-    window.open('https://checkout.codandosemcoder.com.br/product-id', '_blank')
+    window.open('https://pay.kiwify.com.br/No6feAQ', '_blank')
   }
 
   return (
@@ -42,6 +44,13 @@ export function Header() {
         />
         <span className="font-semibold text-sm md:text-base text-white tracking-tight flex items-center gap-2 whitespace-nowrap">
           Codando sem Codar
+          {location.pathname === '/' && (
+            <img
+              src="https://files.catbox.moe/pq17vq.png"
+              alt="Decoration"
+              className="h-6 w-auto object-contain"
+            />
+          )}
         </span>
       </div>
 

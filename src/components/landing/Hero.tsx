@@ -9,10 +9,12 @@ interface HeroProps {
   imageSrc?: string
 }
 
-export function Hero({ title, description }: HeroProps) {
+export function Hero({ title, description, imageSrc }: HeroProps) {
   const handleBuyClick = () => {
-    window.open('https://checkout.codandosemcoder.com.br/product-id', '_blank')
+    window.open('https://pay.kiwify.com.br/No6feAQ', '_blank')
   }
+
+  const defaultImage = 'https://files.catbox.moe/pq17vq.png'
 
   return (
     <section className="relative overflow-hidden pt-20 md:pt-32 pb-20 lg:pb-32 min-h-[80vh] flex items-center">
@@ -62,7 +64,14 @@ export function Hero({ title, description }: HeroProps) {
             </div>
           </div>
 
-          {/* Right Visual removed */}
+          {/* Right Visual */}
+          <div className="relative lg:h-[600px] w-full flex items-center justify-center lg:justify-end animate-fade-in-up animation-delay-200">
+            <img
+              src={imageSrc || defaultImage}
+              alt="Transforme sua planilha em app"
+              className="w-full h-auto max-h-[600px] object-contain drop-shadow-2xl"
+            />
+          </div>
         </div>
       </div>
     </section>

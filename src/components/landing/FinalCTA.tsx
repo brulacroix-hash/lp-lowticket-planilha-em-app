@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 
 export function FinalCTA() {
   const handleBuyClick = () => {
-    window.open('https://checkout.codandosemcoder.com.br/product-id', '_blank')
+    window.open('https://pay.kiwify.com.br/No6feAQ', '_blank')
   }
 
   return (
