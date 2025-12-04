@@ -1,89 +1,72 @@
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-import { ArrowRight } from 'lucide-react'
+import { DisplayCards } from '@/components/landing/DisplayCards'
+import { Database, LayoutTemplate, Smartphone } from 'lucide-react'
 
-interface Feature1Props {
-  title?: string
-  description?: string
-  imageSrc?: string
-  imageAlt?: string
-  buttonPrimary?: {
-    label: string
-    href: string
-  }
-  reverse?: boolean
-}
+export function Feature1() {
+  const cards = [
+    {
+      title: 'Database',
+      description: 'Dados Estruturados',
+      date: 'Backend',
+      icon: <Database className="size-4 text-blue-400" />,
+      className:
+        '[grid-area:stack] translate-x-0 translate-y-0 hover:translate-y-[-10px] transition-transform bg-card/95 shadow-xl z-10',
+    },
+    {
+      title: 'Interface',
+      description: 'Drag & Drop',
+      date: 'Frontend',
+      icon: <LayoutTemplate className="size-4 text-orange-400" />,
+      className:
+        '[grid-area:stack] translate-x-8 translate-y-8 hover:translate-y-6 transition-transform bg-card/95 shadow-xl z-20',
+    },
+    {
+      title: 'Mobile',
+      description: 'App Nativo',
+      date: 'Deploy',
+      icon: <Smartphone className="size-4 text-green-400" />,
+      className:
+        '[grid-area:stack] translate-x-16 translate-y-16 hover:translate-y-14 transition-transform bg-card/95 shadow-xl z-30',
+    },
+  ]
 
-export function Feature1({
-  title = 'Título da Feature',
-  description = 'Descrição da feature aqui.',
-  imageSrc = 'https://img.usecurling.com/p/800/600?q=abstract&color=black',
-  imageAlt = 'Feature Image',
-  buttonPrimary,
-  reverse = false,
-}: Feature1Props) {
   return (
-    <section className="py-24 md:py-32 overflow-hidden">
+    <section className="py-24 bg-background/50 border-y border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div
-          className={cn(
-            'grid items-center gap-12 lg:gap-20 lg:grid-cols-2',
-            reverse && 'lg:grid-flow-dense',
-          )}
-        >
-          {/* Text Content */}
-          <div
-            className={cn(
-              'flex flex-col items-start space-y-6',
-              reverse ? 'lg:col-start-2' : 'lg:col-start-1',
-            )}
-          >
-            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-              Tecnologia Exclusiva
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1 flex justify-center items-center min-h-[400px]">
+            <div className="scale-75 md:scale-100 transform transition-transform">
+              <DisplayCards cards={cards} />
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.1]">
-              {title}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              {description}
-            </p>
-
-            {buttonPrimary && (
-              <Button
-                asChild
-                className="mt-2 group"
-                size="lg"
-                variant="outline"
-              >
-                <a
-                  href={buttonPrimary.href}
-                  target="_blank"
-                  className="flex items-center gap-2"
-                >
-                  {buttonPrimary.label}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-            )}
           </div>
 
-          {/* Image Content */}
-          <div
-            className={cn(
-              'relative w-full',
-              reverse ? 'lg:col-start-1' : 'lg:col-start-2',
-            )}
-          >
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
-              <img
-                src={imageSrc}
-                alt={imageAlt}
-                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-              />
+          <div className="order-1 lg:order-2 space-y-8 animate-fade-in-up">
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                O poder do <span className="text-primary">Vibe Coding</span>
+              </h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-transparent rounded-full"></div>
             </div>
-            {/* Decorative blur behind */}
-            <div className="absolute -inset-4 bg-primary/20 blur-3xl -z-10 rounded-full opacity-50" />
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Não é apenas sobre copiar e colar código. É sobre entender a
+              arquitetura e usar a IA para construir peças complexas de software
+              em minutos, não meses.
+            </p>
+
+            <ul className="space-y-4 text-muted-foreground">
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 rounded-full bg-primary"></span>
+                <span>Construa interfaces complexas rapidamente</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 rounded-full bg-primary"></span>
+                <span>Integre banco de dados sem complicações</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 rounded-full bg-primary"></span>
+                <span>Implante seus projetos com um clique</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
