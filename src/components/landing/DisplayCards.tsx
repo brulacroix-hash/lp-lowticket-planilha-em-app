@@ -39,12 +39,12 @@ export function DisplayCard({
 }
 
 export function DisplayCards({ cards }: { cards?: DisplayCardProps[] }) {
-  const safeCards = cards || []
+  const displayCards = cards || []
 
   return (
     <div className="flex items-center justify-center w-full py-10">
       <div className="grid [grid-template-areas:'stack'] place-items-center opacity-100 animate-in fade-in-0 duration-700">
-        {safeCards.map((card, index) => (
+        {displayCards.map((card, index) => (
           <DisplayCard key={index} {...card} />
         ))}
       </div>
