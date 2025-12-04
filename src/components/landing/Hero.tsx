@@ -20,9 +20,9 @@ export function Hero({ title, description }: HeroProps) {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/10 rounded-[100%] blur-[100px] -z-10 pointer-events-none" />
 
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center text-center">
-          {/* Content */}
-          <div className="flex flex-col items-center space-y-8 max-w-4xl animate-fade-in-up">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col items-start space-y-8 max-w-2xl animate-fade-in-up">
             <Badge
               variant="secondary"
               className="px-4 py-1.5 text-sm font-medium bg-secondary/50 hover:bg-secondary/60 border-primary/20 border text-primary gap-2 rounded-full"
@@ -49,7 +49,7 @@ export function Hero({ title, description }: HeroProps) {
               )}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full pt-4">
               <Button
                 variant="default"
                 size="lg"
@@ -61,6 +61,8 @@ export function Hero({ title, description }: HeroProps) {
               </Button>
             </div>
           </div>
+
+          {/* Right Visual removed */}
         </div>
       </div>
     </section>
